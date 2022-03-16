@@ -1,7 +1,7 @@
 import youtube_dl
 
 def download_ytvid_as_mp3():
-    video_url = open("download MP3\links_mp3.txt", "r")
+    video_url = open("links_mp3.txt", "r")
     for line in video_url:
         video_info = youtube_dl.YoutubeDL().extract_info(url = line,download=False)
         filename = f"{video_info['title']}.mp3"
